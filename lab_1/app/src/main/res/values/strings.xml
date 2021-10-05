@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">first lab</string>
+    <!-- Strings related to login -->
+    <string name="text_label_child">Переданный текст:</string>
+    <string name="save_button_main_text">Показать в новом окне</string>
+    <string name="title_activity_child">ChildActivity</string>
+    <string name="data_got_from_main">Here will be data got from master</string>
+    <string name="child_edit_text_hint">Введите ответ</string>
+    <string name="send_button_child_text">Отправить в главное окно</string>
+    <string name="error_message_main">Не удалось получить текст из %1$s…</string>
+    <string name="data_got_from_child">Текст из созданного окна:</string>
+    <string name="main_edit_text_hint">Введите текст</string>
+</resources>
