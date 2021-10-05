@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Optional;
 
 import ru.kamotora.lab1.R;
-import ru.kamotora.lab1.common.Utils;
+import ru.kamotora.lab1.common.EditTextUtils;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Main Activity");
         setContentView(R.layout.activity_main);
 
         textView = findViewById(R.id.textViewMain);
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         editText.setOnEditorActionListener((v, actionId, event) -> {
             boolean handled = false;
-            if (actionId == EditorInfo.IME_ACTION_SEND && Utils.isEditTextNotBlank(editText)) {
+            if (actionId == EditorInfo.IME_ACTION_SEND && EditTextUtils.isEditTextNotBlank(editText)) {
                 sendText(editText.getText().toString());
                 handled = true;
             }

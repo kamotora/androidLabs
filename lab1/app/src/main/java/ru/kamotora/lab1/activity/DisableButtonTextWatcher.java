@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import lombok.RequiredArgsConstructor;
-import ru.kamotora.lab1.common.Utils;
+import ru.kamotora.lab1.common.EditTextUtils;
 
 @RequiredArgsConstructor
 public class DisableButtonTextWatcher implements TextWatcher {
@@ -16,7 +16,7 @@ public class DisableButtonTextWatcher implements TextWatcher {
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        button.setEnabled(Utils.isEditTextNotBlank(editText));
+        button.setEnabled(EditTextUtils.isEditTextNotBlank(editText));
     }
 
     @Override
