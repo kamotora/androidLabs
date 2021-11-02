@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lab 3 app</string>
+    <string name="defaultResult">Результат</string>
+    <string name="countDigitsText">Количество цифр</string>
+    <string name="onesButtonText">Искать простое число с единицами</string>
+    <string name="twoButtonText">Искать простое число с двойками</string>
+    <string name="threeButtonText">Искать простое число с тройками</string>
+    <string name="startWorking">Вычисляем…</string>
+    <string name="alreadyStarted">Сервис занят…</string>
+    <string name="argumentError">Допустимо полож.число…</string>
+</resources>
