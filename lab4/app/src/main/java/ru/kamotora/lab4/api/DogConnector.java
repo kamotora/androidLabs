@@ -18,7 +18,6 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 import ru.kamotora.lab4.core.PropertiesLoader;
 
 public class DogConnector {
-    static String PROPERTIES_FILE = "application.properties";
     private static DogConnector mInstance;
     private final Retrofit mRetrofit;
 
@@ -28,7 +27,6 @@ public class DogConnector {
 
         OkHttpClient.Builder client = new OkHttpClient.Builder()
                 .addInterceptor(interceptor);
-        Properties properties = new Properties();
         mRetrofit = new Retrofit.Builder()
                 .baseUrl(PropertiesLoader.getProperty("base.url"))
                 .client(client.build())
@@ -48,7 +46,7 @@ public class DogConnector {
     }
 
     public List<String> getBreeds() {
-        return wrap(dogApi -> dogApi.getBreeds()).getBreeds();
+        return wrap(DogApi::getBreeds).getBreeds();
     }
 
     public String getRandomImageLinkByBreed(String breed) {
